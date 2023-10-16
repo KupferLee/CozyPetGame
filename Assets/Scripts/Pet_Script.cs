@@ -4,10 +4,16 @@ using UnityEngine;
 
 public class Pet_Script : MonoBehaviour
 {
+
+    private SpriteRenderer spriteRenderer;
+
     // Start is called before the first frame update
     void Start()
     {
-        
+        spriteRenderer = gameObject.GetComponent<SpriteRenderer>();
+
+
+
     }
 
     // Update is called once per frame
@@ -16,12 +22,18 @@ public class Pet_Script : MonoBehaviour
         
     }
 
+    void ChangeColor(Color newColor)
+    {
+        spriteRenderer.color = newColor;
+    }
+
 
     // pet the cat
     // for button
     public void Interact_Pet()
     {
         Debug.Log("Pet the cat");
+        
     }
 
     public void Interact_Feed()
